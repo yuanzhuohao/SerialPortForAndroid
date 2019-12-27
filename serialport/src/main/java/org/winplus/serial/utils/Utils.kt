@@ -51,7 +51,7 @@ object Utils {
         val sbu = StringBuilder()
         val chars = splitStringEvery(value, 2)
         for (aChar in chars) {
-            sbu.append(Integer.parseInt(aChar).toChar())
+            sbu.append(Integer.parseInt(aChar!!).toChar())
         }
         return sbu.toString()
     }
@@ -74,4 +74,5 @@ object Utils {
 
         return result
     }
+
 }
