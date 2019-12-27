@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+        <EditText
+                android:id="@+id/EditTextReception"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="top"
+                android:hint="Reception"
+                android:isScrollContainer="true"
+                android:scrollbarStyle="insideOverlay"/>
+
+        <EditText
+                android:id="@+id/EditTextEmission"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/EditTextReception"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:hint="F11FE22EB66BA88A0009840000000001330001CB"
+                android:lines="1"/>
+
+        <EditText
+                android:id="@+id/fp_id"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="输入指纹ID"/>
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <Button
+                        android:id="@+id/send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/EditTextEmission"
+                        android:text="发送"/>
+
+                <Button
+                        android:id="@+id/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/send"
+                        android:text="清空"/>
+                <Button
+                        android:id="@+id/power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:text="usb enable"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="reEnroll"
+                        android:text="重新录入"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="enroll"
+                        android:text="录入指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="queryResult"
+                        android:text="查询录入指纹结果"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="save"
+                        android:text="保存指纹"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="querySave"
+                        android:text="查询保存指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="clearAll"
+                        android:text="清空指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="queryClearAll"
+                        android:text="查询清空指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="clearFP"
+                        android:text="清空指定指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="match"
+                        android:text="匹配指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="queryMatch"
+                        android:text="查询匹配指纹"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="fingerState"
+                        android:text="手指状态"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="sleep"
+                        android:text="休眠模式"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="heartRate"
+                        android:text="获取心率"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clear"
+                        android:onClick="exist"
+                        android:text="查询指纹ID是否存在"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
